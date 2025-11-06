@@ -9,15 +9,15 @@ class BaseDatos:
     # CREATE
     def agregar_animal(self, codigo, raza, edad):
         if any(a.codigo == codigo for a in self.animales):
-            print("⚠️ Ya existe un animal con ese código.")
+            print(" Ya existe un animal con ese código.")
         else:
             self.animales.append(Animal(codigo, raza, edad))
-            print("✅ Animal agregado correctamente.")
+            print(" Animal agregado correctamente.")
 
     # READ
     def mostrar_animales(self):
         if not self.animales:
-            print("📭 No hay animales registrados.")
+            print(" No hay animales registrados.")
         else:
             for a in self.animales:
                 print(a)
@@ -45,3 +45,4 @@ class BaseDatos:
         if animal:
             self.animales.remove(animal)
             print("🗑️ Animal eliminado correctamente.")
+
